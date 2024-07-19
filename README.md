@@ -1,14 +1,14 @@
 # dotfiles 💻
 
-Este repositório contém as configurações que utilizo em meu ambiente de desenvolvimento. 
+Este repositório contém as configurações que utilizo em meu ambiente de desenvolvimento.
 Com este conjunto de arquivos, mantenho todas ou a maioria das configurações que utilizo atualizadas e versionadas.
 
 Sinta-se à vontade para abrir uma issue e sugerir melhorias, dar sugestões ou mesmo tirar dúvidas.
 
 ![Nvim](./assets/nvim.png)
 
-*Observação: Os passos descritos foram aplicados em um Mac M3; algumas configurações e procedimentos 
-podem variar de acordo com o processador ou sistema utilizado.*
+_Observação: Os passos descritos foram aplicados em um Mac M3; algumas configurações e procedimentos
+podem variar de acordo com o processador ou sistema utilizado._
 
 ## ⚙️ Configuração
 
@@ -52,7 +52,7 @@ plugins=(
 
 [Site Oficial](https://brew.sh)
 
-O Homebrew em uma versão recente alterou o local de instalação. Por este motivo, 
+O Homebrew em uma versão recente alterou o local de instalação. Por este motivo,
 é necessário configurar o novo path. Para tal, edite o arquivo .zshrc e inclua o seguinte:
 
 ```shell
@@ -67,7 +67,7 @@ brew cask install iterm2
 brew install neovim
 ```
 
-Para resolver uma questão de provider do Neovim, vamos instalar o neovim utilizando o pip. 
+Para resolver uma questão de provider do Neovim, vamos instalar o neovim utilizando o pip.
 
 ```shell
 pip3 install neovim
@@ -77,8 +77,8 @@ Para mais informações, consulte: [Neovim Provider](https://neovim.io/doc/user/
 
 ### NVM
 
-O Node.js também é uma dependência para o Mason e outros recursos que utilizarei no Neovim. 
-Então, vamos seguir para a instalação do Node.js. Para melhor gerenciamento das versões, prefiro 
+O Node.js também é uma dependência para o Mason e outros recursos que utilizarei no Neovim.
+Então, vamos seguir para a instalação do Node.js. Para melhor gerenciamento das versões, prefiro
 instalar o Node.js via nvm. Dessa forma, primeiro devo instalar o nvm:
 
 [Github](https://github.com/nvm-sh/nvm)
@@ -98,7 +98,6 @@ Reinicie o terminal.
 Agora sim o Nodejs.
 Para listar as versoes disponiveis:
 
-
 ```shell
 nvm ls-remote
 ```
@@ -106,8 +105,15 @@ nvm ls-remote
 Instalando e usando a versao desejada:
 
 ```shell
-nvm install 20 
+nvm install 20
 nvm use 20
+```
+
+Instale também o segunte pacote. Esse `vscode-langservers-extracted` sera usado
+juntamento com o plugin `friendly-snippets`:
+
+```
+npm i -g vscode-langservers-extracted
 ```
 
 ### Outras Dependencias
@@ -145,7 +151,7 @@ export PATH=$PATH:$GOBIN
 As minhas configurações, keymaps, plugins, entre outros, já estão configurados nos arquivos `lua`
 disponíveis neste repositório em `.config/.nvim`.
 
-O gerenciador de plugins que utilizo é o [Lazy](https://github.com/folke/lazy.nvim). 
+O gerenciador de plugins que utilizo é o [Lazy](https://github.com/folke/lazy.nvim).
 Desta forma, é preciso apenas copiar os arquivos para o mesmo caminho localmente.
 
 Após isso, basta abrir o `Neovim`, e o `Lazy` já iniciará e instalará os plugins automaticamente.
@@ -182,9 +188,9 @@ brew install tmux
 ### Keyboard
 
 Como o teclado do Mac é em Português, mas utilizo um teclado externo no padrão Americano,
-preciso trocar o `input` do sistema ao alternar entre eles. Por padrão, o atalho para essa 
-troca de idioma é `Ctrl+Space`. Contudo, como é um dos atalhos mais utilizados em um IDE, 
-configuro a troca de input para ``⌘+k`` (k = keyboard), evitando assim conflitos.
+preciso trocar o `input` do sistema ao alternar entre eles. Por padrão, o atalho para essa
+troca de idioma é `Ctrl+Space`. Contudo, como é um dos atalhos mais utilizados em um IDE,
+configuro a troca de input para `⌘+k` (k = keyboard), evitando assim conflitos.
 
 Para realizar essa configuração de atalho, siga os passos abaixo:
 
@@ -197,4 +203,3 @@ Para realizar essa configuração de atalho, siga os passos abaixo:
 ```shell
 brew install --cask obsidian
 ```
-
